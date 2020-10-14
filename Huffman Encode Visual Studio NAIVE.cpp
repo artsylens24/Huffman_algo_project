@@ -1,5 +1,3 @@
-#if 0
-
 #include <iostream>
 #include <unordered_map>
 #include <queue>
@@ -184,5 +182,3 @@ int main()
 
 	return 0;
 }
-
-#endif
