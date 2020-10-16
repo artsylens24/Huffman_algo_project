@@ -1,5 +1,7 @@
 # Huffman_algo_project
 
-The project was done on Microsoft Visual Studio.
-More files to be added for support of using the code by command lines.
-Current CPP files will need to be compiled first for using with given text files.
+Compression algorithm was written from scratch entirely in C++ . 
+Project was written using Microsoft Visual Studio .
+Huffman compression algorithm was used. 
+Both static data and dynamic stream of data were compressed successfully. 
+The compressed data was written in a binary file.
