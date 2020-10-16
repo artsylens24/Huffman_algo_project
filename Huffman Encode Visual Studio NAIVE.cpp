@@ -14,7 +14,7 @@ struct tree
 	tree* left, * right;
 	tree(char data, long long int weight) :data(data), weight(weight), left(NULL), right(NULL){}
 };
-
+s
 
 //comparator function for priority queue
 struct compare
@@ -134,17 +134,15 @@ void write(char a, FILE*& enco)
 	current_byte |= a;
 }
 
-void write_encoded_file()
+void write_encoded_file(FILE*& orig)
 {
 	FILE* enco;
-	FILE* original;
-	errno_t err1 = fopen_s(&original, "text.txt", "rt");
 	errno_t err2 = fopen_s(&enco, "encoded_file.DAT", "wb");
 	char a;
 	current_byte = 0;
 	bit_counter = 0;
 
-	while ((a = fgetc(original)) != EOF)
+	while ((a = fgetc(orig)) != EOF)
 	{
 		std::string s = code[(int)a];
 		for (int i = 0; i < s.size(); i++)
@@ -172,13 +170,13 @@ int main()
 	}
 
 	definefreq(orig);
-	fclose(orig);
+	fseek(orig, 0, SEEK_SET);
 
 	hufftree();
 	savecode(buff.top(), "");
 	freequeue(buff.top());
 	write_freq_file();
-	write_encoded_file();
+	write_encoded_file(orig);
 
 	return 0;
 }
