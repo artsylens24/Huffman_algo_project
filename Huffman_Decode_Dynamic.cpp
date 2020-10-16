@@ -103,7 +103,7 @@ int main(int argc, char** argv)
 
 	if (argc != 4)
 	{
-		fprintf(stderr, "./huffman_decode_dynamic.exe <frequency file> <encoded_file.DAT> <output file>");
+		fprintf(stderr, "huffman_decode_dynamic.exe <frequency file> <encoded_file.DAT> <output file>");
 	}
 
 	std::string frequency, encode, decodestr;
