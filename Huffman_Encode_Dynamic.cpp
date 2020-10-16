@@ -159,7 +159,7 @@ int main(int argc, char** argv)
 	FILE* orig,* encode;
 	if (argc != 3)
 	{
-		fprintf(stderr, "huffman_encode_dyamic.exe <text file name> <encoded file name>");
+		fprintf(stderr, "huffman_encode_dynamic.exe <text file name> <encoded file name>");
 	}
 	std::string text, encoded;
 	text = argv[1];
